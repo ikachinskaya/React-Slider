@@ -1,0 +1,28 @@
+.imgWrapper {
+  width: inherit;
+  height: inherit;
+  position: relative;
+}
+.img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  object-position: center;
+}
+.btnPrev,
+.btnNext {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: lightblue;
+  border: none;
+  position: absolute;
+}
+.btnPrev {
+  left: 2%;
+  top: 50%;
+}
+.btnNext {
+  right: 2%;
+  top: 50%;
+}
