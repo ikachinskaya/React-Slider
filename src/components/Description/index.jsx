@@ -1,5 +1,5 @@
 import { Component } from "react";
-import styles from "./Description.module.css";
+import styles from "./Description.module.scss";
 
 class Description extends Component {
   render() {

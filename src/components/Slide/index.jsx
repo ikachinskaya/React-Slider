@@ -1,5 +1,5 @@
 import { Component } from "react";
-import styles from "./Slide.module.css";
+import styles from "./Slide.module.scss";
 
 class Slide extends Component {
   render() {

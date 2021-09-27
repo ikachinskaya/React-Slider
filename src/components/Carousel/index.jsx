@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Slide from "../Slide";
 import Description from "../Description";
-import styles from "./Carousel.module.css";
+import styles from "./Carousel.module.scss";
 import images from "./../../images";
 
 class Carousel extends Component {
@@ -15,14 +15,14 @@ class Carousel extends Component {
   changeNextImg = () => {
     const { currentIndex } = this.state;
     this.setState({
-      currentIndex: currentIndex + 1,
+      currentIndex: (currentIndex + 1 + images.length) % images.length,
     });
   };
 
   changePrevImg = () => {
     const { currentIndex } = this.state;
     this.setState({
-      currentIndex: currentIndex - 1,
+      currentIndex: (currentIndex - 1 + images.length) % images.length,
     });
   };
   render() {
