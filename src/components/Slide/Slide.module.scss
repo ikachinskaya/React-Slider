@@ -1,7 +1,8 @@
 .imgWrapper {
-  width: inherit;
+  width: 850px;
   height: 600px;
   position: relative;
+  margin: 0 auto;
 }
 .img {
   width: inherit;
@@ -25,4 +26,26 @@
 .btnNext {
   right: 2%;
   top: 50%;
+}
+.btnPlay,
+.btnStop {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+}
+.btnPlay {
+  left: 44%;
+  bottom: 0%;
+}
+.btnStop {
+  right: 44%;
+  bottom: 0%;
+}
+
+.imgPlay,
+.imgStop {
+  width: inherit;
+  height: inherit;
 }
