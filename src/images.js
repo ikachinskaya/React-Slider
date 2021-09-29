@@ -11,7 +11,7 @@ const images = [
     id: 2,
     name: "Fog",
     description:
-      "    Atmospheric phenomenon, accumulation of water in the air, formed by the smallest particles of water.",
+      "Atmospheric phenomenon, accumulation of water in the air, formed by the smallest particles of water.",
     URL: "https://www.gettyimages.com/gi-resources/images/500px/983794168.jpg",
   },
 
