@@ -6,13 +6,15 @@ class Description extends Component {
     const { title, text, description, href } = this.props;
     return (
       <>
-        <h1 className={styles.titleDescription} title={title}>
-          {text}
-        </h1>
-        <p className={styles.textDescription}>{description}</p>
-        <a className={styles.linkDescription} href={href}>
-          Lean More
-        </a>
+        <div className={styles.wrapperDescription}>
+          <h1 className={styles.titleDescription} title={title}>
+            {text}
+          </h1>
+          <p className={styles.textDescription}>{description}</p>
+          <a className={styles.linkDescription} href={href}>
+            Lean More
+          </a>
+        </div>
       </>
     );
   }

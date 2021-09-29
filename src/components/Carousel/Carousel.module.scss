@@ -1,6 +1,10 @@
 .carousel {
-  width: 900px; 
+  width: 1000px;
+  height: 850px;
   margin: 10px auto;
-  padding: 20px;
   background-color: lightgrey;
+}
+.carouselFullScreen {
+  width: 100vw;
+  height: 100vh;
 }

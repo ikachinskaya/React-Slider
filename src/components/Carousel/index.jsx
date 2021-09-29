@@ -10,6 +10,7 @@ class Carousel extends Component {
     this.state = {
       currentIndex: 0,
       images: imagesDB,
+      isFullScreen: false,
     };
     this.intervalId = null;
   }
@@ -17,7 +18,7 @@ class Carousel extends Component {
   changeNextImg = () => {
     const { currentIndex } = this.state;
     this.setState({
-      currentIndex: (currentIndex + 1 + imagesDB.length) % imagesDB.length,
+      currentIndex: (currentIndex + 1) % imagesDB.length,
     });
   };
 
@@ -35,27 +36,38 @@ class Carousel extends Component {
       }, 1000);
     }
   };
- 
+
   stop = () => {
     clearInterval(this.intervalId);
     this.intervalId = null;
     console.log(this.intervalId);
   };
 
+  fullscreen = () => {
+    const { isFullScreen } = this.state;
+    this.setState({
+      isFullScreen: !isFullScreen,
+    });
+  };
+
   render() {
     const { currentIndex } = this.state;
-    const { images } = this.state;
+    const { images, isFullScreen } = this.state;
     const currentSlide = images[currentIndex];
+
     return (
-      <article className={styles.carousel}>
+      <article
+        className={!isFullScreen ? styles.carousel : styles.carouselFullScreen}
+      >
         <Slide
           key={currentSlide.id}
           src={currentSlide.URL}
-          alt="image"
+          alt={currentIndex.name}
           changeNextImg={this.changeNextImg}
           changePrevImg={this.changePrevImg}
           start={this.start}
           stop={this.stop}
+          fullscreen={this.fullscreen}
         />
         <Description
           text={currentSlide.name}
