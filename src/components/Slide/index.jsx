@@ -1,4 +1,5 @@
 import { Component } from "react";
+import PropTypes from "prop-types";
 import styles from "./Slide.module.scss";
 import imageBtn from "./../../Play.png";
 import imageStop from "./../../Stop.png";
@@ -56,5 +57,15 @@ class Slide extends Component {
     );
   }
 }
+
+Slide.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  changePrevImg: PropTypes.func,
+  changeNextImg: PropTypes.func,
+  start: PropTypes.func,
+  stop: PropTypes.func,
+  fullscreen: PropTypes.func,
+};
 
 export default Slide;

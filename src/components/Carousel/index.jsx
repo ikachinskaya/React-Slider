@@ -62,9 +62,9 @@ class Carousel extends Component {
         <Slide
           key={currentSlide.id}
           src={currentSlide.URL}
-          alt={currentIndex.name}
-          changeNextImg={this.changeNextImg}
+          alt={currentSlide.name}
           changePrevImg={this.changePrevImg}
+          changeNextImg={this.changeNextImg}
           start={this.start}
           stop={this.stop}
           fullscreen={this.fullscreen}
