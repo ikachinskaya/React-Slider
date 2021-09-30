@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Button from "./../Button";
 import PropTypes from "prop-types";
 import styles from "./Slide.module.scss";
 import imageBtn from "./../../Play.png";
@@ -6,6 +7,7 @@ import imageStop from "./../../Stop.png";
 import prev from "./../../prev.png";
 import next from "./../../next.png";
 import fullScreen from "./../../fullscreen.png";
+import stylesBtn from "./../Button/Button.module.scss";
 
 class Slide extends Component {
   render() {
@@ -15,43 +17,28 @@ class Slide extends Component {
       <>
         <div className={styles.imgWrapper}>
           <img className={styles.img} src={src} alt={alt} />
-          <button
-            className={`${styles.btnPrev} ${styles.btn} ${styles.btnPosition}`}
-            type="image"
+          <Button
+            className={`${stylesBtn.btnPrev} ${stylesBtn.btnPosition}`}
             onClick={changePrevImg}
-          >
-            <img src={prev} alt="Preview" />
-          </button>
-          <button
-            className={`${styles.btnNext} ${styles.btn} ${styles.btnPosition}`}
-            type="image"
+            src={prev}
+            alt="Preview"
+          />
+          <Button
+            className={`${stylesBtn.btnNext} ${stylesBtn.btnPosition}`}
             onClick={changeNextImg}
-          >
-            <img src={next} alt="Next" />
-          </button>
-          <div className={`${styles.btnWrapper} ${styles.btnPosition} `}>
-            <button
-              className={`${styles.btnPlay} ${styles.btn} `}
-              type="image"
-              onClick={start}
-            >
-              <img className={styles.imgPlay} src={imageBtn} alt="Play" />
-            </button>
-            <button
-              className={`${styles.btnStop} ${styles.btn} `}
-              type="image"
-              onClick={stop}
-            >
-              <img className={styles.imgStop} src={imageStop} alt="Stop" />
-            </button>
+            src={next}
+            alt="Next"
+          />
+          <div className={`${stylesBtn.btnWrapper} ${stylesBtn.btnPosition} `}>
+            <Button onClick={start} src={imageBtn} alt="Play" />
+            <Button onClick={stop} src={imageStop} alt="Stop" />
           </div>
-          <button
-            className={`${styles.btnFullScreen} ${styles.btn} ${styles.btnPosition}`}
-            type="image"
+          <Button
+            className={`${stylesBtn.btnFullScreen} ${stylesBtn.btnPosition}`}
             onClick={fullscreen}
-          >
-            <img src={fullScreen} alt="Fullscreen" />
-          </button>
+            src={fullScreen}
+            alt="Fullscreen"
+          />
         </div>
       </>
     );
