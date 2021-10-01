@@ -39,8 +39,7 @@ class Carousel extends Component {
 
   stop = () => {
     clearInterval(this.intervalId);
-    this.intervalId = null;
-    console.log(this.intervalId);
+    this.intervalId = null;   
   };
 
   fullscreen = () => {
@@ -51,8 +50,7 @@ class Carousel extends Component {
   };
 
   render() {
-    const { currentIndex } = this.state;
-    const { images, isFullScreen } = this.state;
+    const { currentIndex, images, isFullScreen } = this.state;
     const currentSlide = images[currentIndex];
 
     return (
