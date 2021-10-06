@@ -66,6 +66,7 @@ class Carousel extends Component {
           start={this.start}
           stop={this.stop}
           fullscreen={this.fullscreen}
+          isFullScreen={isFullScreen}
         />
         <Description
           text={currentSlide.name}

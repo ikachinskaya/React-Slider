@@ -7,12 +7,21 @@ import imageStop from "./../../Stop.png";
 import prev from "./../../prev.png";
 import next from "./../../next.png";
 import fullScreen from "./../../fullscreen.png";
+import smallScreen from "./../../smallScreen.png";
 import stylesBtn from "./../Button/Button.module.scss";
 
 class Slide extends Component {
   render() {
-    const { src, alt, changePrevImg, changeNextImg, start, stop, fullscreen } =
-      this.props;
+    const {
+      src,
+      alt,
+      changePrevImg,
+      changeNextImg,
+      start,
+      stop,
+      fullscreen,
+      isFullScreen,
+    } = this.props;
     return (
       <>
         <div className={styles.imgWrapper}>
@@ -36,8 +45,7 @@ class Slide extends Component {
           <Button
             className={`${stylesBtn.btnFullScreen} ${stylesBtn.btnPosition}`}
             onClick={fullscreen}
-            src={fullScreen}
-            alt="Fullscreen"
+            src={isFullScreen ? smallScreen : fullScreen}
           />
         </div>
       </>
